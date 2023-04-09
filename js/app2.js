@@ -161,10 +161,8 @@ function verificaButtons() {
   for (i = 0; i < floors.length; i++) {
     if (floors[i].name.classList.contains(bgVar)) {
       //disabilitaButton();
-      BtnOpenCloseModel.style.display = "none";
       return true;
     } else {
-      BtnOpenCloseModel.style.display = "inline";
       api.seekTo(2.45);
       //openModel();
     }

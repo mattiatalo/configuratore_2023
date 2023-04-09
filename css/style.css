@@ -6,17 +6,29 @@ html,
 
 
 .container {
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 /*   height: 100%;
  */  height: calc(100vh - 100px);
+=======
+  box-sizing: border-box;
+  padding:0 5%;
+>>>>>>> test-brach
 }
-#miniContainer{
-  width: 100%;
+
+#miniContainer {
+  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   position: relative;
   height: calc(100vh - 100px);
+=======
+
+>>>>>>> test-brach
 }
 
 .iframe-container {
@@ -24,7 +36,7 @@ html,
   width: 100%;
   height: inherit;
   min-height: 540px;
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -32,7 +44,7 @@ html,
 
 }
 
-.iframe-container > iframe {
+.iframe-container>iframe {
   position: inherit;
   border: 0;
   width: 100%;
@@ -41,9 +53,13 @@ html,
 
 }
 
-#panel{
+#panel {
   padding: 10px 0px;
   z-index: 99;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .controls {
@@ -58,7 +74,7 @@ html,
   overflow: scroll;
 }
 
-.controls > * {
+.controls>* {
   margin-right: 15px;
   margin-bottom: 15px;
 }
@@ -121,7 +137,7 @@ table {
   transition: all 1s ease-in-out;
 }
 
-.hidden-table{
+.hidden-table {
   width: 0;
   transition: all 1s ease-in-out;
 }
@@ -136,6 +152,7 @@ td {
 #indexTh {
   width: 36px;
 }
+
 th {
   background-color: #ccc;
 }
@@ -164,7 +181,7 @@ tr:hover {
 }
 
 .btn {
-  width:120px;
+  width: 120px;
   font-size: 12px;
   /* color: white; */
   border-radius: 7px;
@@ -177,31 +194,32 @@ tr:hover {
   /* box-shadow: 0px 5px 10px #0057ab; */
   transition: all .1s ease-in-out;
 }
+
 .btn:hover {
   box-shadow: 0 10px 2px 0px rgba(0, 0, 0, 0.4);
   transform: scale(1.03);
 }
 
-.btn:active{
+.btn:active {
   transform: scale(0.98);
 }
 
 
-.bg-red
-{
+.bg-red {
   background-color: rgb(34, 33, 33);
-  color:white;
+  color: white;
   top: 3px;
   box-shadow: 0 2px 0px #250e0e;
   transform: scale(0.98);
   transition: all .2s ease-in-out;
 }
 
-.bg-red:hover{
+.bg-red:hover {
   box-shadow: 0 2px 0px #250e0e;
 
 }
-.bg-red:active{
+
+.bg-red:active {
   background-color: red !important;
 
 
@@ -209,8 +227,7 @@ tr:hover {
 
 
 
-#containerTest button 
-{
+#containerTest button {
   background-color: #fff;
   border: 0;
   outline: 0;
@@ -237,7 +254,7 @@ tr:hover {
 
 
 
-#containerTest{
+#containerTest {
   padding: 10px 10px;
 }
 
@@ -247,9 +264,9 @@ tr:hover {
   align-items: flex-start;
   flex-wrap: nowrap;
   padding: 10px;
-  margin: 200px 10px;
-}
+/*   margin: 200px 10px;
+ */}
 
-.tabellaTemp{
-margin: 0 4px;
+.tabellaTemp {
+  margin: 0 4px;
 }

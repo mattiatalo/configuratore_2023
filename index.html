@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+    <audio id="myAudio">
+        <source src="/audio/click.mp3" type="audio/mp3" preload="auto">
+    </audio>
+</head>
+
+<body>
+    <div id="masterVis">
+        <div class="container">
+            <div id="miniContainer">
+                <h1>The Frigate Novara</h1>
+                <p>Testo descrittivo visualizzatore</p>
+                <div id="containerTest">
+                    <button id="test" class="" href="#0">TEST SICURO</button>
+                    <button id="testRapido" class="" href="#0">TEST TAPIDO</button>
+                </div>
+                <div class="iframe-container">
+                    <iframe title="Sketchfab Viewer" id="api-frame"></iframe>
+                    <div class="table-container">
+                        <table id="table-body" class="hidden">
+                            <tr>
+                                <th id="indexTh">ID</th>
+                                <th>Name</th>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+                <div id="panel">
+                    <label>
+                        <input type="checkbox" id="solo" onchange="onChangeS()" /> Solo mode</label>
+                    <button id="sails" class="btn hidden" href="#0">SAILS</button>
+                    <button id="mainDeck" class="btn" href="#0">MAIN DECK</button>
+                    <button id="upperDeck" class="btn" href="#0">UPPER DECK</button>
+                    <button id="lowerDeck" class="btn"> LOWER DECK</button>
+                    <button id="hold" class="btn">HOLD</button>
+                    <button id="lowerHold" class="btn">LOWER HOLD</button>
+                    <button id="open-close" class="btn bg-color">CLOSE MODEL</button>
+
+                </div>
+            </div>
+            <div id="tabelletemp"></div>
+
+        </div>
+    </div>
+
+
+    <!-- <script src="./js/app.js" type="module"></script>  -->
+    <script src="./js/annotations.js"></script>
+    <script src="./js/app2.js"></script>
+
+</body>
+
+</html>

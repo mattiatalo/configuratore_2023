@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frigate Novara - 3D Model</title>
+    <link rel="stylesheet" href="./css/custom.css" />
+  </head>
+
+  <body>
+    <!-- Learn about this code on sketchfab: https://sketchfab.com/developers/viewer -->
+    <script
+      type="text/javascript"
+      src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"
+    ></script>
+    <div class="container">
+      <div class="iframe-container">
+        <iframe
+          title="Sketchfab Viewer"
+          src=""
+          id="api-frame"
+          width="1280"
+          height="800"
+        ></iframe>
+      </div>
+      <div id="panel" class="hidden">
+        <button id="sails">Sails - visible</button>
+        <button id="fl1">Floor 1 - visible</button>
+        <button id="fl2">Floor 2 - visible</button>
+        <button id="fl3">Floor 3 - visible</button>
+        <button id="fl4">Floor 4 - visible</button>
+        <button id="static">Static</button>
+        <button id="animV">Split Vertical</button>
+        <button id="animH">Split Horizontal</button>
+        <input type="checkbox" id="annotation" />
+        <label for="annotation"> Annotation</label>
+      </div>
+    </div>
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>

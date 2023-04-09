@@ -42,10 +42,10 @@ function playSoundRapido() {
   audio.play();
 }
 
-var test = document.getElementById("test").addEventListener("click", playSound);
+/* var test = document.getElementById("test").addEventListener("click", playSound);
 var testR = document
   .getElementById("testRapido")
-  .addEventListener("click", playSoundRapido);
+  .addEventListener("click", playSoundRapido); */
 
 /**
  * ASSEGNO UN ACHORLINK COMUNE A TUTTI

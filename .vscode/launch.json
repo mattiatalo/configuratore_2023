@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open novara.html",
+            "file": "/Users/mattiatalo/Library/CloudStorage/Dropbox/01_Production/01_Works/Animdrops/2023/2307_UniTrieste_ProduzioneMistaNovara/02_Produzione/GSR_frigateNovara_sketchfab/configuratore_2023/novara.html"
+        }
+    ]
+}

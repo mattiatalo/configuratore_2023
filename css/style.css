@@ -10,6 +10,7 @@ html,
   flex-direction: column;
 /*   height: 100%;
  */  height: calc(100vh - 100px);
+ background-color: yellow;
 }
 #miniContainer{
   width: 100%;
@@ -17,12 +18,14 @@ html,
   flex-direction: column;
   position: relative;
   height: calc(100vh - 100px);
+  background-color: red;
+
 }
 
 .iframe-container {
   position: relative;
   width: 100%;
-  height: inherit;
+  height: 100px;
   min-height: 540px;
   flex: 1; 
   display: flex;

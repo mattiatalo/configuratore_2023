@@ -18,7 +18,7 @@ html,
   flex: 1;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
 }
 
 .iframe-container {
@@ -50,6 +50,8 @@ html,
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: rgb(233, 233, 233);
+  width: 100%;
 }
 
 .controls {

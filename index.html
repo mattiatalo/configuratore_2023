@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- versione 2.04.11 -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +11,19 @@
     <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
     <audio id="myAudio">
         <source src="/audio/click.mp3" type="audio/mp3" preload="auto">
-    </audio> 
+    </audio>
 </head>
 
 <body>
     <div id="masterVis">
         <div class="container">
             <div id="miniContainer">
-                <h1>The Frigate Novara</h1>
-                <p>Testo descrittivo visualizzatore</p>
+                <h3 class="ct-headline color-dark h2 mb-6">The Frigate Novara</h3>
+                <img id="ornam" alt="" src="https://globalsearoutes.net/wp-content/uploads/2022/07/ornaments-01.png"
+                    class="ct-image mb-8 ornamento"
+                    srcset="https://globalsearoutes.net/wp-content/uploads/2022/07/ornaments-01.png 530w, https://globalsearoutes.net/wp-content/uploads/2022/07/ornaments-01-300x25.png 300w"
+                    sizes="(max-width: 530px) 100vw, 530px"/>
+                <p></p>
 
                 <div class="iframe-container">
                     <iframe title="Sketchfab Viewer" id="api-frame"></iframe>
@@ -33,9 +38,8 @@
                     <p id="testoSel" class="hidden"></p>
                 </div>
                 <div id="panel">
-                    <label>
-                        <input type="checkbox" title="Messaggio del tooltip" id="solo" onchange="onChangeS()" /> SOLO</label>
-                    <button id="sails" class="btn hidden" href="#0">SAILS</button>
+                    <label><input type="checkbox" title="" id="solo" onchange="onChangeS()" /> SOLO</label>
+                    <button id="sails" class="btn" href="#0">SAILS</button>
                     <button id="mainDeck" class="btn" href="#0">MAIN DECK</button>
                     <button id="upperDeck" class="btn" href="#0">UPPER DECK</button>
                     <button id="lowerDeck" class="btn"> LOWER DECK</button>

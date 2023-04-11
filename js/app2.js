@@ -46,16 +46,15 @@ function playSound() {
 }
 
 
+var anchorLink = "#masterVis";
 /**
  * ASSEGNO UN ACHORLINK COMUNE A TUTTI
- */
-var anchorLink = "#masterVis";
+*/// assegna lo stesso attributo href a tutti gli elementi di ancoraggio
+/* 
 var links = document.querySelectorAll("#panel a");
-
-// assegna lo stesso attributo href a tutti gli elementi di ancoraggio
 for (var i = 0; i < links.length; i++) {
   links[i].setAttribute("href", anchorLink);
-}
+} */
 
 /* var myElement = document.getElementById("frameC");
 var myElement2 = document.getElementById("myEl");
@@ -208,7 +207,7 @@ GUI = (ogg) => {
     link.classList.add("clickable");
     nameCell.appendChild(link);
     nameCell.classList.add("clickable");
-    nameCell.setAttribute("onclick", "location.href='#masterVis';");
+    nameCell.setAttribute("onclick", "location.href='#0';");
     row.appendChild(nameCell);
     // Aggiungi un listener di click alla cella del nome
     nameCell.addEventListener("click", function () {
@@ -455,7 +454,7 @@ let success = (apiClient) => {
 
     function OpenCloseModel() {
       BtnOpenCloseModel.addEventListener("click", () => {
-        console.log("entrato nella opencose");
+        playSound();
         api.addEventListener("animationPlay", disabilitaButton);
 
         api.addEventListener("animationStop", riabilitaButton);

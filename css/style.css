@@ -44,7 +44,7 @@ html,
 }
 
 #panel {
-  padding: 10px 0px;
+  padding: 10px 10px;
   z-index: 99;
   display: flex;
   flex-direction: row;
@@ -179,7 +179,7 @@ tr:hover {
   display: inline-block;
   top: 0;
   cursor: pointer;
-  margin: 0 5px;
+  margin: 10px 5px;
   height: 50px;
   /* box-shadow: 0px 5px 10px #0057ab; */
   transition: all .1s ease-in-out;
@@ -259,4 +259,25 @@ tr:hover {
 
 .tabellaTemp {
   margin: 0 4px;
+}
+
+div#panel label {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#testoSel {
+  position: absolute;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 40px;
+  text-align: center;
 }

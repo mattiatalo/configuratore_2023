@@ -20,6 +20,9 @@ let rows;
 let api;
 let tabella = document.getElementById("table-body");
 const BtnOpenCloseModel = document.getElementById("open-close");
+let testoSel = document.getElementById("testoSel");
+
+
 
 const controls = document.getElementById("table");
 const part0 = 81; //  alberi_vele_corde
@@ -32,26 +35,20 @@ let bgVar = "bg-red";
 const animationPiano = "f7bc1ed90f7c4f26b03386e626a09b74"; // UID Animazione della nave che si apre in piano
 var audio = document.getElementById("myAudio");
 
+
+
+
+//funzioni click
 function playSound() {
   audio.load();
   audio.currentTime = 0;
   audio.play();
 }
-function playSoundRapido() {
-  audio.currentTime = 0;
-  audio.play();
-}
 
-/* var test = document.getElementById("test").addEventListener("click", playSound);
-var testR = document
-  .getElementById("testRapido")
-  .addEventListener("click", playSoundRapido); */
 
 /**
  * ASSEGNO UN ACHORLINK COMUNE A TUTTI
- *
  */
-
 var anchorLink = "#masterVis";
 var links = document.querySelectorAll("#panel a");
 
@@ -97,10 +94,8 @@ CHECKBOX INPUT
 */
 function onChangeS() {
   if (solo.checked) {
-    //GUI();
     return true;
   } else {
-    //destroyGUI();
     return false;
   }
 }
@@ -396,9 +391,10 @@ let success = (apiClient) => {
             rimuoviAnnotazioni();
             oggetto.resetCam();
             tabella.classList.add("hidden-table");
+            testoSel.classList.add("hidden");
             destroyGUI();
           }
-          //Il tasto DIVENTA ROSSO e VISUALIZZA FINO alla parte selezionata
+          //Il tasto DIVENTA ROSSO e VISUALIZZA la parte selezionata
           else {
             api.seekTo(2.45);
             mostraTutto();
@@ -408,6 +404,8 @@ let success = (apiClient) => {
             aggiungiClasse(oggetto.name);
             oggetto.setCam();
             creaAnnotation(annotazione);
+            testoSel.innerHTML = "You have selected: " + `<b>${oggetto.name.textContent}</b>` ;
+            testoSel.classList.remove("hidden");
             tabella.classList.remove("hidden-table");
           }
         }
@@ -423,6 +421,7 @@ let success = (apiClient) => {
             rimuoviAnnotazioni();
             oggetto.resetCam();
             tabella.classList.add("hidden-table");
+            testoSel.classList.add("hidden");
           }
           // Il tasto DIVENTA ROSSO VISUALIZZA SOLO LA PARTE
           else {
@@ -434,6 +433,8 @@ let success = (apiClient) => {
             rimuoviAnnotazioni();
             oggetto.setCam();
             creaAnnotation(annotazione);
+            testoSel.innerHTML = "You have selected: " + `<b>${oggetto.name.textContent}</b>` ;
+            testoSel.classList.remove("hidden");
             tabella.classList.remove("hidden-table");
           }
         }
@@ -445,7 +446,10 @@ let success = (apiClient) => {
       oggetto.addEventListener("click", () => {
         rimuoviClassi();
         mostraTutto();
-        rimuoviAnnotazioni();
+        rimuoviAnnotazioni();            
+        testoSel.classList.add("hidden");
+        api.setCameraLookAt(camReset.eye, camReset.target);
+
       });
     }
 

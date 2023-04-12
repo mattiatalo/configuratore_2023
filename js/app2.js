@@ -391,8 +391,8 @@ let success = (apiClient) => {
       oggetto.name.addEventListener("click", () => {
         playSound();
         tabella.classList.remove("hidden");
-        //se SOLO MODE NON ATTIVO
-        //se SOLO MODE NON ATTIVO
+
+        
         //se SOLO MODE NON ATTIVO - TUTTI I TASTI GRIGI
         if (!onChangeS()) {
           if (oggetto.name.classList.contains(bgVar)) {
@@ -482,6 +482,7 @@ let success = (apiClient) => {
     }
 
     reset(solo);
+    reset(BtnOpenCloseModel);
     tastiAzioni(iSails, 0, gaSails);
     tastiAzioni(iMainDeck, 1, gaMainDock);
     tastiAzioni(iUpperDeck, 2, gaUD);

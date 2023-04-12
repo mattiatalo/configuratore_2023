@@ -163,26 +163,7 @@ function verificaButtons() {
   }
 }
 
-// Crea annotazione
-function creaAnnotation(ogg) {
-  rimuoviAnnotazioni();
-  destroyGUI();
-  for (let i in ogg) {
-    api.createAnnotationFromScenePosition(
-      ogg[i].position,
-      ogg[i].eye,
-      ogg[i].target,
-      ogg[i].name,
-      ogg[i].name,
-      function (err, index) {
-        if (!err) {
-          //window.console.log("Created new annotatation", index + 1);
-        }
-      }
-    );
-  }
-  GUI(ogg);
-}
+
 
 //GUI TABELLA con annotazioni nel DOM
 GUI = (ogg) => {
@@ -236,7 +217,26 @@ destroyGUI = () => {
     ANNOTAZIONI
 */
 /////////////////////////////////////////////////////////////////////////
-
+// Crea annotazione
+function creaAnnotation(ogg) {
+  rimuoviAnnotazioni();
+  destroyGUI();
+  for (let i in ogg) {
+    api.createAnnotationFromScenePosition(
+      ogg[i].position,
+      ogg[i].eye,
+      ogg[i].target,
+      ogg[i].name,
+      ogg[i].name,
+      function (err, index) {
+        if (!err) {
+          //window.console.log("Created new annotatation", index + 1);
+        }
+      }
+    );
+  }
+  GUI(ogg);
+}
 //funzione che salva tutte le annotazioni in un array
 //salvataggio manuale delle annotazioni statiche
 function listAnnotations() {
@@ -265,6 +265,20 @@ function rimuoviAnnotazioni() {
 */
 /////////////////////////////////////////////////////////////////////////
 
+const setFirstAnimation = () => {
+  api.getAnimations((err, animations) => {
+    // An animation is described by an array. The array contains an
+    // ID and a length among others
+    //console.log(animations);
+    if (animations.length > 0) {
+      api.setCurrentAnimationByUID(animationPiano, (err) => {
+        api.seekTo(0);;
+      });
+    }
+  });
+};
+
+
 function closeModel(animationPiano) {
   api.seekTo(2.45);
   // Ottiene l'ID dell'animazione dal nome
@@ -292,7 +306,6 @@ function openModel(animationPiano) {
   api.seekTo(0);
   // Riproduce l'animazione
   api.play(animationPiano);
-  setTimeout(fra2Sec, 24500);
   BtnOpenCloseModel.classList.remove("bg-green");
   BtnOpenCloseModel.classList.add("bg-color");
   BtnOpenCloseModel.textContent = "CLOSE MODEL";
@@ -319,6 +332,7 @@ let success = (apiClient) => {
       } // get the id from that log
       //console.log(result);
       audio.play();
+      setTimeout(setFirstAnimation, 3000);
     });
 
     // Funzione che mostra tutti i pezzi della nave

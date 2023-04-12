@@ -20,6 +20,9 @@ let rows;
 let api;
 let tabella = document.getElementById("table-body");
 const BtnOpenCloseModel = document.getElementById("open-close");
+let testoSel = document.getElementById("testoSel");
+
+
 
 const controls = document.getElementById("table");
 const part0 = 81; //  alberi_vele_corde
@@ -32,33 +35,26 @@ let bgVar = "bg-red";
 const animationPiano = "f7bc1ed90f7c4f26b03386e626a09b74"; // UID Animazione della nave che si apre in piano
 var audio = document.getElementById("myAudio");
 
+
+
+
+//funzioni click
 function playSound() {
   audio.load();
   audio.currentTime = 0;
   audio.play();
 }
-function playSoundRapido() {
-  audio.currentTime = 0;
-  audio.play();
-}
 
-/* var test = document.getElementById("test").addEventListener("click", playSound);
-var testR = document
-  .getElementById("testRapido")
-  .addEventListener("click", playSoundRapido); */
-
-/**
- * ASSEGNO UN ACHORLINK COMUNE A TUTTI
- *
- */
 
 var anchorLink = "#masterVis";
+/**
+ * ASSEGNO UN ACHORLINK COMUNE A TUTTI
+*/// assegna lo stesso attributo href a tutti gli elementi di ancoraggio
+/* 
 var links = document.querySelectorAll("#panel a");
-
-// assegna lo stesso attributo href a tutti gli elementi di ancoraggio
 for (var i = 0; i < links.length; i++) {
   links[i].setAttribute("href", anchorLink);
-}
+} */
 
 /* var myElement = document.getElementById("frameC");
 var myElement2 = document.getElementById("myEl");
@@ -97,10 +93,8 @@ CHECKBOX INPUT
 */
 function onChangeS() {
   if (solo.checked) {
-    //GUI();
     return true;
   } else {
-    //destroyGUI();
     return false;
   }
 }
@@ -169,26 +163,7 @@ function verificaButtons() {
   }
 }
 
-// Crea annotazione
-function creaAnnotation(ogg) {
-  rimuoviAnnotazioni();
-  destroyGUI();
-  for (let i in ogg) {
-    api.createAnnotationFromScenePosition(
-      ogg[i].position,
-      ogg[i].eye,
-      ogg[i].target,
-      ogg[i].name,
-      ogg[i].name,
-      function (err, index) {
-        if (!err) {
-          //window.console.log("Created new annotatation", index + 1);
-        }
-      }
-    );
-  }
-  GUI(ogg);
-}
+
 
 //GUI TABELLA con annotazioni nel DOM
 GUI = (ogg) => {
@@ -213,7 +188,7 @@ GUI = (ogg) => {
     link.classList.add("clickable");
     nameCell.appendChild(link);
     nameCell.classList.add("clickable");
-    nameCell.setAttribute("onclick", "location.href='#masterVis';");
+    nameCell.setAttribute("onclick", "location.href='#0';");
     row.appendChild(nameCell);
     // Aggiungi un listener di click alla cella del nome
     nameCell.addEventListener("click", function () {
@@ -242,7 +217,26 @@ destroyGUI = () => {
     ANNOTAZIONI
 */
 /////////////////////////////////////////////////////////////////////////
-
+// Crea annotazione
+function creaAnnotation(ogg) {
+  rimuoviAnnotazioni();
+  destroyGUI();
+  for (let i in ogg) {
+    api.createAnnotationFromScenePosition(
+      ogg[i].position,
+      ogg[i].eye,
+      ogg[i].target,
+      ogg[i].name,
+      ogg[i].name,
+      function (err, index) {
+        if (!err) {
+          //window.console.log("Created new annotatation", index + 1);
+        }
+      }
+    );
+  }
+  GUI(ogg);
+}
 //funzione che salva tutte le annotazioni in un array
 //salvataggio manuale delle annotazioni statiche
 function listAnnotations() {
@@ -271,6 +265,20 @@ function rimuoviAnnotazioni() {
 */
 /////////////////////////////////////////////////////////////////////////
 
+const setFirstAnimation = () => {
+  api.getAnimations((err, animations) => {
+    // An animation is described by an array. The array contains an
+    // ID and a length among others
+    //console.log(animations);
+    if (animations.length > 0) {
+      api.setCurrentAnimationByUID(animationPiano, (err) => {
+        api.seekTo(0);;
+      });
+    }
+  });
+};
+
+
 function closeModel(animationPiano) {
   api.seekTo(2.45);
   // Ottiene l'ID dell'animazione dal nome
@@ -298,7 +306,6 @@ function openModel(animationPiano) {
   api.seekTo(0);
   // Riproduce l'animazione
   api.play(animationPiano);
-  setTimeout(fra2Sec, 24500);
   BtnOpenCloseModel.classList.remove("bg-green");
   BtnOpenCloseModel.classList.add("bg-color");
   BtnOpenCloseModel.textContent = "CLOSE MODEL";
@@ -325,6 +332,7 @@ let success = (apiClient) => {
       } // get the id from that log
       //console.log(result);
       audio.play();
+      setTimeout(setFirstAnimation, 3000);
     });
 
     // Funzione che mostra tutti i pezzi della nave
@@ -396,9 +404,10 @@ let success = (apiClient) => {
             rimuoviAnnotazioni();
             oggetto.resetCam();
             tabella.classList.add("hidden-table");
+            testoSel.classList.add("hidden");
             destroyGUI();
           }
-          //Il tasto DIVENTA ROSSO e VISUALIZZA FINO alla parte selezionata
+          //Il tasto DIVENTA ROSSO e VISUALIZZA la parte selezionata
           else {
             api.seekTo(2.45);
             mostraTutto();
@@ -408,6 +417,8 @@ let success = (apiClient) => {
             aggiungiClasse(oggetto.name);
             oggetto.setCam();
             creaAnnotation(annotazione);
+            testoSel.innerHTML = "You have selected: " + `<b>${oggetto.name.textContent}</b>` ;
+            testoSel.classList.remove("hidden");
             tabella.classList.remove("hidden-table");
           }
         }
@@ -423,6 +434,7 @@ let success = (apiClient) => {
             rimuoviAnnotazioni();
             oggetto.resetCam();
             tabella.classList.add("hidden-table");
+            testoSel.classList.add("hidden");
           }
           // Il tasto DIVENTA ROSSO VISUALIZZA SOLO LA PARTE
           else {
@@ -434,6 +446,8 @@ let success = (apiClient) => {
             rimuoviAnnotazioni();
             oggetto.setCam();
             creaAnnotation(annotazione);
+            testoSel.innerHTML = "You have selected: " + `<b>${oggetto.name.textContent}</b>` ;
+            testoSel.classList.remove("hidden");
             tabella.classList.remove("hidden-table");
           }
         }
@@ -445,13 +459,16 @@ let success = (apiClient) => {
       oggetto.addEventListener("click", () => {
         rimuoviClassi();
         mostraTutto();
-        rimuoviAnnotazioni();
+        rimuoviAnnotazioni();            
+        testoSel.classList.add("hidden");
+        api.setCameraLookAt(camReset.eye, camReset.target);
+
       });
     }
 
     function OpenCloseModel() {
       BtnOpenCloseModel.addEventListener("click", () => {
-        console.log("entrato nella opencose");
+        playSound();
         api.addEventListener("animationPlay", disabilitaButton);
 
         api.addEventListener("animationStop", riabilitaButton);

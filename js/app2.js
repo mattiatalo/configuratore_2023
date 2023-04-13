@@ -227,7 +227,7 @@ function creaAnnotation(ogg) {
       ogg[i].eye,
       ogg[i].target,
       ogg[i].name,
-      ogg[i].name,
+      ogg[i].content.rendered,
       function (err, index) {
         if (!err) {
           //window.console.log("Created new annotatation", index + 1);

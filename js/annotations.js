@@ -571,10 +571,10 @@ const gaLH = [
 ];
 
 const bibliteca = [gaSails, gaMainDock, gaUD, gaLD, gaHO, gaLH];
-
+let temp2 = [];
 let tabelle = () => {
   const temp = document.getElementById("tabelletemp");
-  bibliteca.forEach((array) => {
+  bibliteca.forEach((array, a) => {
     const tabella1 = document.createElement("table");
     tabella1.classList.add("tabellaTemp");
     console.log("---");
@@ -603,17 +603,46 @@ let tabelle = () => {
       });
       tabella1.appendChild(row);
     });
+    temp2[a] = tabella1;
     temp.appendChild(tabella1);
   });
+ tabellaMain.tab = temp2[1];
+ tabellaUpper.tab =temp2[2];
+ tabellaLower.tab =temp2[3];
+ tabellaHold.tab = temp2[4];
+ tabellaLowerHold.tab =temp2[5];
+
+  return bibliteca;
 };
 
-let tabellaMain = () => {};
 
-let tabellaUpper = () => {};
+let tabellaSails = {
+  tit: gaSails, 
+  tab: undefined
+};
+let tabellaMain = {
+  tit: gaMainDock, 
+  tab: undefined
+};
 
-let tabellaLower = () => {};
-let tabellaHold = () => {};
-let tabellaLowerHold = () => {};
+let tabellaUpper = {
+  tit: gaUD, 
+  tab: undefined
+};
+let tabellaLower= {
+  tit: gaLD, 
+  tab: undefined
+};
+let tabellaHold= {
+  tit: gaHO, 
+  tab: undefined
+};
+let tabellaLowerHold= {
+  tit: gaLH, 
+  tab: undefined
+};
+
+const tabelleGlobal = [tabellaSails,tabellaMain,tabellaUpper,tabellaLower, tabellaHold, tabellaLowerHold];
 
 //CAMERE
 //cam default

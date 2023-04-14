@@ -93,8 +93,10 @@ CHECKBOX INPUT
 */
 function onChangeS() {
   if (solo.checked) {
+    destroyGUI();
     return true;
   } else {
+    destroyGUI();
     return false;
   }
 }
@@ -164,9 +166,19 @@ function verificaButtons() {
 }
 
 
-
 //GUI TABELLA con annotazioni nel DOM
 GUI = (ogg) => {
+  
+  /* const tableBody = document.getElementById("table-body-cont");
+  for (let i = 0; i < tabelleGlobal.length; i++) {
+    if (tabelleGlobal[i].tit=== ogg) {
+      tableBody.appendChild(tabelleGlobal[i].tab);
+      return tabelleGlobal[i];
+    }
+    console.log(ogg);
+  } */
+  
+  
   const tableBody = document.getElementById("table-body");
   // Popola la tabella con i dati dell'array
   for (let i in ogg) {
@@ -201,7 +213,8 @@ GUI = (ogg) => {
     // Aggiungi la riga alla tabella
     tableBody.appendChild(row);
   }
-};
+ 
+}; 
 
 //Distruggi UI TABELLA
 destroyGUI = () => {
@@ -469,6 +482,7 @@ let success = (apiClient) => {
     function OpenCloseModel() {
       BtnOpenCloseModel.addEventListener("click", () => {
         playSound();
+        destroyGUI();
         api.addEventListener("animationPlay", disabilitaButton);
 
         api.addEventListener("animationStop", riabilitaButton);

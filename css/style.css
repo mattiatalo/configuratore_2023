@@ -225,8 +225,9 @@ button:disabled {
   cursor: default;
 }
 
-tr:hover {
-  background-color: rgba(173, 154, 109, 0.25);
+tr:hover > td > a, tr:hover  {
+  background-color: rgba(161, 0, 0, 0.65);
+  color:white;
 }
 
 .btn {

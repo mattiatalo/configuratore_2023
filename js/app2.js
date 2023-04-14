@@ -21,8 +21,7 @@ let api;
 let tabella = document.getElementById("table-body");
 const BtnOpenCloseModel = document.getElementById("open-close");
 let testoSel = document.getElementById("testoSel");
-
-
+let pan = document.getElementById("panel");
 
 const controls = document.getElementById("table");
 const part0 = 81; //  alberi_vele_corde
@@ -35,9 +34,6 @@ let bgVar = "bg-red";
 const animationPiano = "f7bc1ed90f7c4f26b03386e626a09b74"; // UID Animazione della nave che si apre in piano
 var audio = document.getElementById("myAudio");
 
-
-
-
 //funzioni click
 function playSound() {
   audio.load();
@@ -45,11 +41,10 @@ function playSound() {
   audio.play();
 }
 
-
 var anchorLink = "#masterVis";
 /**
  * ASSEGNO UN ACHORLINK COMUNE A TUTTI
-*/// assegna lo stesso attributo href a tutti gli elementi di ancoraggio
+ */ // assegna lo stesso attributo href a tutti gli elementi di ancoraggio
 /* 
 var links = document.querySelectorAll("#panel a");
 for (var i = 0; i < links.length; i++) {
@@ -165,10 +160,8 @@ function verificaButtons() {
   }
 }
 
-
 //GUI TABELLA con annotazioni nel DOM
 GUI = (ogg) => {
-  
   /* const tableBody = document.getElementById("table-body-cont");
   for (let i = 0; i < tabelleGlobal.length; i++) {
     if (tabelleGlobal[i].tit=== ogg) {
@@ -177,8 +170,7 @@ GUI = (ogg) => {
     }
     console.log(ogg);
   } */
-  
-  
+
   const tableBody = document.getElementById("table-body");
   // Popola la tabella con i dati dell'array
   for (let i in ogg) {
@@ -213,8 +205,7 @@ GUI = (ogg) => {
     // Aggiungi la riga alla tabella
     tableBody.appendChild(row);
   }
- 
-}; 
+};
 
 //Distruggi UI TABELLA
 destroyGUI = () => {
@@ -243,7 +234,7 @@ function creaAnnotation(ogg) {
       ogg[i].content.rendered,
       function (err, index) {
         if (!err) {
-          //window.console.log("Created new annotatation", index + 1);
+          //console.log("Created new annotatation", index + 1);
         }
       }
     );
@@ -257,7 +248,7 @@ function listAnnotations() {
     if (!err) {
       annotationsList = annotations;
       annotationCount = annotations.length;
-      window.console.log(annotations);
+      console.log(annotations);
     }
   });
 }
@@ -285,12 +276,11 @@ const setFirstAnimation = () => {
     //console.log(animations);
     if (animations.length > 0) {
       api.setCurrentAnimationByUID(animationPiano, (err) => {
-        api.seekTo(0);;
+        api.seekTo(0);
       });
     }
   });
 };
-
 
 function closeModel(animationPiano) {
   api.seekTo(2.45);
@@ -345,7 +335,8 @@ let success = (apiClient) => {
       } // get the id from that log
       //console.log(result);
       audio.play();
-      setTimeout(setFirstAnimation, 3000);
+      setTimeout(setFirstAnimation, 2000);
+      pan.classList.remove("hidden");
     });
 
     // Funzione che mostra tutti i pezzi della nave
@@ -405,7 +396,6 @@ let success = (apiClient) => {
         playSound();
         tabella.classList.remove("hidden");
 
-        
         //se SOLO MODE NON ATTIVO - TUTTI I TASTI GRIGI
         if (!onChangeS()) {
           if (oggetto.name.classList.contains(bgVar)) {
@@ -430,7 +420,8 @@ let success = (apiClient) => {
             aggiungiClasse(oggetto.name);
             oggetto.setCam();
             creaAnnotation(annotazione);
-            testoSel.innerHTML = "You have selected: " + `<b>${oggetto.name.textContent}</b>` ;
+            testoSel.innerHTML =
+              "You have selected: " + `<b>${oggetto.name.textContent}</b>`;
             testoSel.classList.remove("hidden");
             tabella.classList.remove("hidden-table");
           }
@@ -459,7 +450,8 @@ let success = (apiClient) => {
             rimuoviAnnotazioni();
             oggetto.setCam();
             creaAnnotation(annotazione);
-            testoSel.innerHTML = "You have selected: " + `<b>${oggetto.name.textContent}</b>` ;
+            testoSel.innerHTML =
+              "You have selected: " + `<b>${oggetto.name.textContent}</b>`;
             testoSel.classList.remove("hidden");
             tabella.classList.remove("hidden-table");
           }
@@ -472,10 +464,9 @@ let success = (apiClient) => {
       oggetto.addEventListener("click", () => {
         rimuoviClassi();
         mostraTutto();
-        rimuoviAnnotazioni();            
+        rimuoviAnnotazioni();
         testoSel.classList.add("hidden");
         api.setCameraLookAt(camReset.eye, camReset.target);
-
       });
     }
 
@@ -483,6 +474,7 @@ let success = (apiClient) => {
       BtnOpenCloseModel.addEventListener("click", () => {
         playSound();
         destroyGUI();
+        rimuoviAnnotazioni();
         api.addEventListener("animationPlay", disabilitaButton);
 
         api.addEventListener("animationStop", riabilitaButton);

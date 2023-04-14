@@ -60,7 +60,7 @@ h3 {
 
 }
 
-#panel {
+.panel {
   padding: 10px 10px;
   z-index: 99;
   display: flex;
@@ -153,6 +153,7 @@ table {
   border: .5px solid rgb(69, 69, 69);
   border-collapse: collapse;
   width: 250px;
+  min-width: 250px;
   transition: all 1s ease-in-out;
 }
 
@@ -359,7 +360,7 @@ div#panel label {
 @media (max-width: 767px) {
 
   /* Stili qui */
-  #panel {
+  .panel {
     display: grid;
     grid-template-columns: repeat(3, 30%);
     grid-gap: 5px;

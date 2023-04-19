@@ -334,9 +334,23 @@ let success = (apiClient) => {
         return;
       } // get the id from that log
       //console.log(result);
-      audio.play();
-      setTimeout(setFirstAnimation, 2000);
-      pan.classList.remove("hidden");
+      api.load(function() {
+        window.console.log('Viewer loaded');
+        audio.play();
+        setTimeout(setFirstAnimation, 2000);
+        pan.classList.remove("hidden");
+    });
+
+    api.addEventListener('modelLoadProgress', function(factor) {
+      window.console.log('modelLoadProgress: ' + factor);
+  });
+  
+    api.addEventListener('textureLoadProgress', function(factor) {
+      window.console.log('textureLoadProgress: ' + factor);
+  });
+  
+
+    
     });
 
     // Funzione che mostra tutti i pezzi della nave

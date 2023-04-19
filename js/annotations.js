@@ -234,11 +234,11 @@ const gaMainDock = [
     target: [35.6385716366607, -19.4253361956259, 9.85788565937223],
   },
   {
-    name: "C6+6 18-pounders cast in the Gusswerk foundries near Mariazell",
+    name: "6+6 18-pounders cast in the Gusswerk foundries near Mariazell",
     content: {
-      raw: "C6+6 cannoni da 18 libbre fusi\r\nnelle fonderie Gusswerk vicino a Mariazell, Stiria",
+      raw: "6+6 cannoni da 18 libbre fusi\r\nnelle fonderie Gusswerk vicino a Mariazell, Stiria",
       rendered:
-        "<p>C6+6 cannoni da 18 libbre fusi\nnelle fonderie Gusswerk vicino a Mariazell, Stiria</p>",
+        "<p>6+6 cannoni da 18 libbre fusi\nnelle fonderie Gusswerk vicino a Mariazell, Stiria</p>",
     },
     position: [38.73221129037682, -10.508142339503655, 10.45703550906656],
     eye: [16.271578948122066, -12.906440246103113, 29.64161769604644],

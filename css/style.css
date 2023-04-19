@@ -169,7 +169,7 @@ table {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   transform: rotate(270deg);
-  left: -23px;
+  left: -53px;
   font-weight: 800;
   font-size: 15px;
   line-height: 50px;
@@ -179,9 +179,9 @@ table {
 .titolo-tabella:hover {
   cursor: pointer;
   color: #ffffff;
-  padding: 0 50px;
+  padding: 0 52px;
   background-color: black;
-  left: -80px;
+  left: -105px;
 
 }
 

@@ -3,8 +3,8 @@ const gaSails = [
     //1
     name: "Flying jib",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Controfiocco",
+      rendered: "Controfiocco",
     },
     position: [34.84608772533658, 39.55118259855085, 28.395476785919694],
     eye: [0.23608844824409658, 66.27761762818847, 36.476180346925425],
@@ -14,8 +14,8 @@ const gaSails = [
     //2
     name: "Outer jib",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Fiocco",
+      rendered: "Fiocco",
     },
     position: [34.946969954544784, 33.36338499431392, 27.338533058810608],
     eye: [-2.2170244634167346, 63.63558924233111, 35.72108606475215],
@@ -25,8 +25,8 @@ const gaSails = [
     //3
     name: "Inner jib",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Gran Fiocco",
+      rendered: "Gran Fiocco",
     },
     position: [34.76450773943214, 27.682420824540188, 24.6892146069902],
     eye: [-10.859160505782505, 51.53529839594323, 33.60973277304013],
@@ -36,8 +36,8 @@ const gaSails = [
     //4
     name: "Fore moonsail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Controvelaccino",
+      rendered: "Controvelaccino",
     },
     position: [34.145169739201165, 20.551193569508314, 52.72041143244468],
     eye: [2.9204252385412417, 49.74601387858923, 54.84233634104036],
@@ -47,8 +47,8 @@ const gaSails = [
     //5
     name: "Fore staysail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Velaccino",
+      rendered: "Velaccino",
     },
     position: [33.993768004512994, 21.30559183731902, 47.16520559465633],
     eye: [8.188348610335957, 57.365923496565046, 49.00434802799087],
@@ -58,8 +58,8 @@ const gaSails = [
     //6
     name: "Fore topsail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Parrocchetto",
+      rendered: "Parrocchetto",
     },
     position: [32.45361847807385, 22.54109798436471, 36.75613219109865],
     eye: [6.514804292074128, 54.7866622882195, 39.78836281260503],
@@ -69,8 +69,8 @@ const gaSails = [
     //7
     name: "Foresail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Trinchetto",
+      rendered: "Trinchetto",
     },
     position: [32.213071727750076, 22.329908331197373, 23.949673269121327],
     eye: [-1.7946845243353309, 47.23047385295369, 29.78751040175803],
@@ -80,8 +80,8 @@ const gaSails = [
     //8
     name: "Main royal staysail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Strallo di velaccio",
+      rendered: "Strallo di velaccio",
     },
     position: [34.7729941881251, 12.378961323097197, 42.29855595507172],
     eye: [-8.810716493841554, 13.640229696663779, 43.84232822294239],
@@ -91,8 +91,8 @@ const gaSails = [
     //9
     name: "Main topgallant staysail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Strallo di gabbia",
+      rendered: "Strallo di gabbia",
     },
     position: [34.86952058677492, 11.593527178143509, 30.85949458018198],
     eye: [-8.25526274875832, 10.587194358164716, 36.94617085756745],
@@ -102,8 +102,8 @@ const gaSails = [
     //10
     name: "Main moonsail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Velaccio",
+      rendered: "Velaccio",
     },
     position: [33.71799537115366, 0.6183841928424254, 54.85761298923428],
     eye: [0.8238027511918204, 29.362911220614297, 57.361719670728405],
@@ -113,8 +113,8 @@ const gaSails = [
     //11
     name: "Main skysail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Controvelaccio",
+      rendered: "Controvelaccio",
     },
     position: [33.72903350607827, 1.4514466895591704, 48.934198996295336],
     eye: [3.8901675313816675, 24.77471218165624, 51.249590946827894],
@@ -124,8 +124,8 @@ const gaSails = [
     //12
     name: "Main topgallant sail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Gabbia",
+      rendered: "Gabbia",
     },
     position: [33.26581998390709, 3.523822728843391, 37.404905891573236],
     eye: [-5.583673917258842, 33.70295597160131, 37.748281898332344],
@@ -135,8 +135,8 @@ const gaSails = [
     //13
     name: "Mainsail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Maestra",
+      rendered: "Maestra",
     },
     position: [32.98694980516489, 2.6869847166204783, 23.601914707693677],
     eye: [-3.5204439877387053, 28.839068878858054, 24.005419069427848],
@@ -146,8 +146,8 @@ const gaSails = [
     //14
     name: "Mizzen topgallant staysail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Strallo di belvedere",
+      rendered: "Strallo di belvedere",
     },
     position: [34.73750212242655, -7.451033522402838, 30.086967845407496],
     eye: [-7.0525075672795765, 3.5173314083370215, 34.75509339655725],
@@ -157,8 +157,8 @@ const gaSails = [
     //15
     name: "Mizzen moonsail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Controbelvedere",
+      rendered: "Controbelvedere",
     },
     position: [34.419865327812104, -14.816470904122577, 45.43599260222298],
     eye: [10.465419380033108, 5.318949278292489, 47.60003797200605],
@@ -168,8 +168,8 @@ const gaSails = [
     //16
     name: "Mizzen skysail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Belvedere",
+      rendered: "Belvedere",
     },
     position: [34.24876660035335, -14.008214771958764, 41.0418117154063],
     eye: [10.954631146983207, 6.861008071906905, 42.48757074139298],
@@ -179,8 +179,8 @@ const gaSails = [
     //17
     name: "Mizzen topgallant sail",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Contromezzana",
+      rendered: "Contromezzana",
     },
     position: [34.24876660035335, -12.888522526663861, 32.90208727257472],
     eye: [3.0311636163001268, 6.726022534184612, 34.11635785326319],
@@ -190,8 +190,8 @@ const gaSails = [
     //18
     name: "Spanker",
     content: {
-      raw: "",
-      rendered: "",
+      raw: "Randa",
+      rendered: "Randa",
     },
     position: [35.33367828164517, -22.799946830027622, 23.457921897156936],
     eye: [-5.29439321103537, -8.734757136724324, 27.220191723149927],
@@ -312,11 +312,11 @@ const gaUD = [
   },
 
   {
-    name: "30-pounder cannons cast in the Gusswerk foundries near Mariazell",
+    name: "9+9 30-pounders cast in the Gusswerk foundries near Mariazell",
     content: {
-      raw: "Cannoni da 30\r\nlibbre fusi nelle fonderie Gusswerk vicino a\r\nMariazell, Stiria",
+      raw: "9+9 Cannoni da 30\r\nlibbre fusi nelle fonderie Gusswerk vicino a\r\nMariazell, Stiria",
       rendered:
-        "<p>Cannoni da 30\nlibbre fusi nelle fonderie Gusswerk vicino a\nMariazell, Stiria</p>",
+        "<p>9+9 Cannoni da 30\nlibbre fusi nelle fonderie Gusswerk vicino a\nMariazell, Stiria</p>",
     },
     position: [13.760875027151197, 6.076452773944812, 7.415079155768641],
     eye: [4.5236405075081905, 5.218032328911567, 25.00992499167978],

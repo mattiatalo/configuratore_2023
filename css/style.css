@@ -22,7 +22,7 @@ h3 {
 
 /* COPIARE DA QUI  */
 .container {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 0px);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;

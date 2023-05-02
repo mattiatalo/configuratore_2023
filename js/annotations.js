@@ -216,8 +216,8 @@ const gaMainDock = [
   {
     name: "Reserve timber for masts and yards",
     content: {
-      raw: "(legname per\r\nalberatura e pennoni di riserva)",
-      rendered: "<p>(legname per\nalberatura e pennoni di riserva)</p>",
+      raw: "Legname per\r\nalberatura e pennoni di riserva",
+      rendered: "<p>Legname per\nalberatura e pennoni di riserva</p>",
     },
     position: [33.19010710626893, 6.88907010828828, 9.319500439088696],
     eye: [16.770027856797096, 5.641909115848679, 29.66579312943993],
@@ -248,9 +248,9 @@ const gaMainDock = [
   {
     name: "Crew hammocks rolled up for air exposure",
     content: {
-      raw: "amache dell'equipaggio arrotolate per l'esposizione\r\nall'aria",
+      raw: "Amache dell'equipaggio arrotolate per l'esposizione\r\nall'aria",
       rendered:
-        "<p>amache dell&rsquo;equipaggio arrotolate per l&rsquo;esposizione\nall&rsquo;aria</p>",
+        "<p>Amache dell&rsquo;equipaggio arrotolate per l&rsquo;esposizione\nall&rsquo;aria</p>",
     },
     position: [29.347657980227996, 8.756581226076543, 11.388207457293321],
     eye: [15.30245857859087, 7.449612999600744, 29.9317767433554],
@@ -303,8 +303,8 @@ const gaUD = [
   {
     name: "Kitchen and Rocher seawater distillation apparatus",
     content: {
-      raw: "Kitchen and Rocher seawater distillation apparatus",
-      rendered: "<p>Kitchen and Rocher seawater distillation apparatus</p>",
+      raw: "Cucina e apparato Rocher per la distillazione dell'acqua di mare",
+      rendered: "<p>Cucina e apparato Rocher per la distillazione dell'acqua di mare</p>",
     },
     position: [16.96600910419457, 15.154237249094276, 7.3064941037839946],
     eye: [5.475919364441243, 12.376923768774798, 25.631555133916983],
@@ -347,21 +347,21 @@ const gaLD = [
     target: [-1.848818122568404, -0.9794668456785884, 5.131583457953832],
   },
   {
-    name: "Storerooms for cadets' belongings",
+    name: "Storeroom for cadets' belongings",
     content: {
-      raw: "Ripostigli\r\nper le masserizie dei cadetti",
-      rendered: "<p>Ripostigli\nper le masserizie dei cadetti</p>",
+      raw: "Ripostiglio\r\nper le masserizie dei cadetti",
+      rendered: "<p>Ripostiglio\nper le masserizie dei cadetti</p>",
     },
     position: [-5.06475889818136, -0.5478393245509607, 5.637240606891791],
     eye: [-14.329329705205115, -1.0484784328726733, 23.66274402762387],
     target: [-2.595513441184915, -0.7995328195465944, 4.67256761225059],
   },
   {
-    name: "Spaces reserved for crew meals and dormitory, with hammocks",
+    name: "Spaces reserved for crew meals and dormitory, with hammocks (sailors used these spaces according to work shifts)",
     content: {
-      raw: "Sailors used these spaces according to work shifts \r\n\r\n- ITA -\r\nSpazi riservati ai\r\npasti e a dormitorio dell'equipaggio, con le amache appese sopra i\r\ntavoli adibiti a mensa; i marinai usufruivano di questi spazi\r\navvicendandosi a seconda dei turni di servizio)",
+      raw: "Spazi riservati ai\r\npasti e a dormitorio dell'equipaggio, con le amache appese sopra i\r\ntavoli adibiti a mensa; i marinai usufruivano di questi spazi\r\navvicendandosi a seconda dei turni di servizio)",
       rendered:
-        "<p>Sailors used these spaces according to work shifts </p>\n<ul>\n<li>ITA -\nSpazi riservati ai\npasti e a dormitorio dell&rsquo;equipaggio, con le amache appese sopra i\ntavoli adibiti a mensa; i marinai usufruivano di questi spazi\navvicendandosi a seconda dei turni di servizio)</li>\n</ul>",
+        "<p>Spazi riservati ai\npasti e a dormitorio dell&rsquo;equipaggio, con le amache appese sopra i\ntavoli adibiti a mensa; i marinai usufruivano di questi spazi\navvicendandosi a seconda dei turni di servizio)</li>\n</ul>",
     },
     position: [-4.1010142670453975, 6.90363293346546, 6.679415509113458],
     eye: [-14.586677015098026, 9.44717626794154, 27.521591157844313],
@@ -394,8 +394,8 @@ const gaHO = [
   {
     name: "Storeroom and depot for rice, vegetables, cocoa, etc",
     content: {
-      raw: "dspensa e deposito riso, verdure, cacao ecc.",
-      rendered: "<p>dspensa e deposito riso, verdure, cacao ecc.</p>",
+      raw: "Dispensa e deposito riso, verdure, cacao ecc.",
+      rendered: "<p>Dispensa e deposito riso, verdure, cacao ecc.</p>",
     },
     position: [-16.545867357945628, -2.4388796471540424, 3.4738471132164883],
     eye: [-31.288129169423133, -1.6112617731722065, 26.32840908875635],
@@ -444,9 +444,9 @@ const gaHO = [
   {
     name: "Boatswain's cabin (equipment store)",
     content: {
-      raw: "Cala del Nostromo, deposito\r\nattrezzature sotto il controllo del Nostromo",
+      raw: "Cala del nostromo (deposito attrezzature sotto il controllo del nostromo)",
       rendered:
-        "<p>Cala del Nostromo, deposito\nattrezzature sotto il controllo del Nostromo</p>",
+        "<p>Cala del nostromo (deposito attrezzature sotto il controllo del nostromo)</p>",
     },
     position: [-15.351306372172681, 21.156756551556725, 3.4878819316335647],
     eye: [-27.106765965520072, 19.42628750761282, 24.436512607177587],
@@ -487,11 +487,11 @@ const gaLH = [
     target: [-27.91019133412957, -11.027135321579506, 6.355332907855474],
   },
   {
-    name: "Food store Commodore, Commanding Officer,",
+    name: "Store reserved for Commodore, Commanding Officer, Officers and hospitalised personnel on board",
     content: {
-      raw: "Officers and hospitalised\r\npersonnel on board\r\n\r\n-ITA -\r\nDeposito vettovaglie\r\nCommodoro, Comandante,\r\nUfficiali e personale\r\nricoverato nell'ospedale di\r\nbordo",
+      raw: "Deposito vettovaglie\r\nCommodoro, Comandante,\r\nUfficiali e personale\r\nricoverato nell'ospedale di\r\nbordo",
       rendered:
-        "<p>Officers and hospitalised\npersonnel on board</p>\n<p>-ITA -\nDeposito vettovaglie\nCommodoro, Comandante,\nUfficiali e personale\nricoverato nell&rsquo;ospedale di\nbordo</p>",
+        "<p>Deposito vettovaglie\nCommodoro, Comandante,\nUfficiali e personale\nricoverato nell&rsquo;ospedale di\nbordo</p>",
     },
     position: [-31.80142076834014, -6.383260347800974, 5.19660462794606],
     eye: [-49.360528795319745, -6.6419776468658025, 29.98243081475766],
@@ -500,8 +500,8 @@ const gaLH = [
   {
     name: "Beverage store (wine and rum)",
     content: {
-      raw: "Mmagazzino bevande,\r\nvino e rum",
-      rendered: "<p>Mmagazzino bevande,\nvino e rum</p>",
+      raw: "Magazzino bevande (vino e rum",
+      rendered: "<p>Magazzino bevande (vino e rum)</p>",
     },
     position: [-28.492430470989135, -4.097443317390475, 2.5299382056882624],
     eye: [-49.28171942830987, -3.6283261024215974, 30.062706337885864],
@@ -551,8 +551,8 @@ const gaLH = [
   {
     name: "Coal store",
     content: {
-      raw: "Magazzino\r\ncarbone",
-      rendered: "<p>Magazzino\ncarbone</p>",
+      raw: "Deposito carbone",
+      rendered: "<p>Deposito carbone</p>",
     },
     position: [-27.84068572931769, 16.092892343070215, 2.7277646175215597],
     eye: [-49.87627111175877, 18.705406587637718, 29.60725148610087],

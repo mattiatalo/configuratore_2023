@@ -41,7 +41,7 @@ function playSound() {
   audio.play();
 }
 
-var anchorLink = "#masterVis";
+var anchorLink = "#api-frame";
 /**
  * ASSEGNO UN ACHORLINK COMUNE A TUTTI
  */ // assegna lo stesso attributo href a tutti gli elementi di ancoraggio
@@ -216,11 +216,9 @@ destroyGUI = () => {
   }
 };
 
-//////////////////////////////////////////////////////////////////////////
 /*
     ANNOTAZIONI
 */
-/////////////////////////////////////////////////////////////////////////
 // Crea annotazione
 function creaAnnotation(ogg) {
   rimuoviAnnotazioni();

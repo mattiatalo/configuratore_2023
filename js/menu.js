@@ -7,7 +7,7 @@ var title = document.querySelector(".titolo-tabella");
 }); */
 document.addEventListener("click", function (event) {
   var isClickInside = title.contains(event.target);
-  console.log(isClickInside);
+  //console.log(isClickInside);
   if (isClickInside && menuOuter.classList.contains("open-table")) {
     menuOuter.classList.remove("open-table");
   } else if (isClickInside && !menuOuter.classList.contains("open-table")) {

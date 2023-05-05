@@ -201,29 +201,6 @@ const gaSails = [
 
 const gaMainDock = [
   {
-    /* 
-
-        */
-    name: "Main deck",
-    content: {
-      raw: "",
-      rendered: "",
-    },
-    position: [34.7769841967121, 0.4198505692625054, 9.343587544737632],
-    eye: [22.613461909135687, -24.709358733120727, 23.951098802747786],
-    target: [37.45084223565485, -3.3472538359944464, 8.276488701016143],
-  },
-  {
-    name: "Reserve timber for masts and yards",
-    content: {
-      raw: "Legname per\r\nalberatura e pennoni di riserva",
-      rendered: "<p>Legname per\nalberatura e pennoni di riserva</p>",
-    },
-    position: [33.19010710626893, 6.88907010828828, 9.319500439088696],
-    eye: [16.770027856797096, 5.641909115848679, 29.66579312943993],
-    target: [34.22364163584362, 5.199779254347743, 9.026841264190622],
-  },
-  {
     name: "Captain's cabin",
     content: {
       raw: "Cabina del Comandante",
@@ -244,6 +221,30 @@ const gaMainDock = [
     eye: [16.271578948122066, -12.906440246103113, 29.64161769604644],
     target: [33.7251927271686, -13.348570107604068, 9.002665830797135],
   },
+  {
+    /* 
+        */
+    name: "Main deck",
+    content: {
+      raw: "",
+      rendered: "",
+    },
+    position: [34.7769841967121, 0.4198505692625054, 9.343587544737632],
+    eye: [22.613461909135687, -24.709358733120727, 23.951098802747786],
+    target: [37.45084223565485, -3.3472538359944464, 8.276488701016143],
+  },
+  {
+    name: "Reserve timber for masts and yards",
+    content: {
+      raw: "Legname per\r\nalberatura e pennoni di riserva",
+      rendered: "<p>Legname per\nalberatura e pennoni di riserva</p>",
+    },
+    position: [33.19010710626893, 6.88907010828828, 9.319500439088696],
+    eye: [16.770027856797096, 5.641909115848679, 29.66579312943993],
+    target: [34.22364163584362, 5.199779254347743, 9.026841264190622],
+  },
+
+
 
   {
     name: "Crew hammocks rolled up for air exposure",
@@ -256,6 +257,31 @@ const gaMainDock = [
     eye: [15.30245857859087, 7.449612999600744, 29.9317767433554],
     target: [30.653082773040456, 8.242268702198754, 7.431294103715179],
   },
+  {
+    name: "Capstan",
+    content: {
+      raw: "Cabestano",
+      rendered:
+        "<p>Cabestano</p>",
+    },
+        //da modificare la position
+    position: [29.347657980227996, 8.756581226076543, 11.388207457293321],
+    eye: [15.30245857859087, 7.449612999600744, 29.9317767433554],
+    target: [30.653082773040456, 8.242268702198754, 7.431294103715179],
+  },
+  {
+    name: "Binnacles",
+    content: {
+      raw: "Chiesuole (bussole al traverso)",
+      rendered:
+        "<p>Chiesuole (bussole al traverso)</p>",
+    },
+    //da modificare la position
+    position: [29.347657980227996, 8.756581226076543, 11.388207457293321],
+    eye: [15.30245857859087, 7.449612999600744, 29.9317767433554],
+    target: [30.653082773040456, 8.242268702198754, 7.431294103715179],
+  },
+
 ];
 
 const gaUD = [
@@ -301,17 +327,6 @@ const gaUD = [
     target: [20.910937220410954, -1.5421613054694159, -0.5589249387775245],
   },
   {
-    name: "Kitchen and Rocher seawater distillation apparatus",
-    content: {
-      raw: "Cucina e apparato Rocher per la distillazione dell'acqua di mare",
-      rendered: "<p>Cucina e apparato Rocher per la distillazione dell'acqua di mare</p>",
-    },
-    position: [16.96600910419457, 15.154237249094276, 7.3064941037839946],
-    eye: [5.475919364441243, 12.376923768774798, 25.631555133916983],
-    target: [21.385583558544322, 12.5034576554141, -0.19775734613474918],
-  },
-
-  {
     name: "9+9 30-pounders cast in the Gusswerk foundries near Mariazell",
     content: {
       raw: "9+9 Cannoni da 30\r\nlibbre fusi nelle fonderie Gusswerk vicino a\r\nMariazell, Stiria",
@@ -322,6 +337,17 @@ const gaUD = [
     eye: [4.5236405075081905, 5.218032328911567, 25.00992499167978],
     target: [20.43330470161127, 5.344566215550871, -0.8193874883719526],
   },
+  {
+    name: "Kitchen and Rocher seawater distillation apparatus",
+    content: {
+      raw: "Cucina e apparato Rocher per la distillazione dell'acqua di mare",
+      rendered: "<p>Cucina e apparato Rocher per la distillazione dell'acqua di mare</p>",
+    },
+    position: [16.96600910419457, 15.154237249094276, 7.3064941037839946],
+    eye: [5.475919364441243, 12.376923768774798, 25.631555133916983],
+    target: [21.385583558544322, 12.5034576554141, -0.19775734613474918],
+  },
+  
 ];
 
 // Global Annotation Lower Deck

@@ -259,7 +259,7 @@ const gaMainDock = [
     name: "Capstan",
     content: {
       raw: "Cabestano (argano)",
-      rendered: "<p>cabestano (argano)</p>",
+      rendered: "<p>Cabestano (argano)</p>",
     },
     //da modificare la position
     position: [34.724232711169456, -6.111732272305899, 10.4816359375],
@@ -294,7 +294,7 @@ const gaMainDock = [
     name: "Stable for live cattle",
     content: {
       raw: "Locali per i bovini vivi",
-      rendered: "<p>locali per i bovini vivi</p>",
+      rendered: "<p>Locali per i bovini vivi</p>",
     },
     //da modificare la position
     position: [35.954236376680306, 21.42571084904504, 9.659354707950895],

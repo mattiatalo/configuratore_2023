@@ -222,8 +222,8 @@ const gaMainDock = [
     target: [33.7251927271686, -13.348570107604068, 9.002665830797135],
   },
   {
-    /* 
-        */
+    /*
+     */
     name: "Main deck",
     content: {
       raw: "",
@@ -244,8 +244,6 @@ const gaMainDock = [
     target: [34.22364163584362, 5.199779254347743, 9.026841264190622],
   },
 
-
-
   {
     name: "Crew hammocks rolled up for air exposure",
     content: {
@@ -260,28 +258,49 @@ const gaMainDock = [
   {
     name: "Capstan",
     content: {
-      raw: "Cabestano",
-      rendered:
-        "<p>Cabestano</p>",
+      raw: "Cabestano (argano)",
+      rendered: "<p>cabestano (argano)</p>",
     },
-        //da modificare la position
-    position: [29.347657980227996, 8.756581226076543, 11.388207457293321],
-    eye: [15.30245857859087, 7.449612999600744, 29.9317767433554],
-    target: [30.653082773040456, 8.242268702198754, 7.431294103715179],
+    //da modificare la position
+    position: [34.724232711169456, -6.111732272305899, 10.4816359375],
+    eye: [23.04096353631907, -14.742649080152665, 21.219493638474198],
+    target: [34.73812910322777, -6.133399246129631, 10.308465284069943],
   },
   {
     name: "Binnacles",
     content: {
-      raw: "Chiesuole (bussole al traverso)",
-      rendered:
-        "<p>Chiesuole (bussole al traverso)</p>",
+      raw: "Bussole a chiesuola",
+      rendered: "<p>Bussole a chiesuola</p>",
     },
     //da modificare la position
-    position: [29.347657980227996, 8.756581226076543, 11.388207457293321],
-    eye: [15.30245857859087, 7.449612999600744, 29.9317767433554],
-    target: [30.653082773040456, 8.242268702198754, 7.431294103715179],
+    position: [33.802264956057826, -13.138600538566994, 10.298908135133704],
+    eye: [26.593003354002263, -8.610408199711056, 15.826767665065084],
+    target: [34.16019605589869, -13.342995912562127, 10.080342119015928],
   },
+  {
+    name: "Typical Venetian gondola, used as an auxiliary boat (the Novara was built at the Arsenal of Austrian Venice)",
+    content: {
+      raw: "Gondola veneziana usata come imbarcazione di servizio e rappresentanza (la Novara fu costruita all'Arsenale di Venezia austriaca)",
+      rendered:
+        "<p>Gondola veneziana usata come imbarcazione di servizio e rappresentanza (la Novara fu costruita all'Arsenale di Venezia austriaca)</p>",
+    },
+    //da modificare la position
 
+    position: [42.711692577551375, -5.675487923447497, 10.411023026093943],
+    eye: [54.142694956351214, -18.536304686279625, 21.156958289610344],
+    target: [43.04591774987251, -6.206983072222321, 10.361340285146888],
+  },
+  {
+    name: "Stable for live cattle",
+    content: {
+      raw: "Locali per i bovini vivi",
+      rendered: "<p>locali per i bovini vivi</p>",
+    },
+    //da modificare la position
+    position: [35.954236376680306, 21.42571084904504, 9.659354707950895],
+    eye: [13.71948328337944, 23.430560370362834, 26.459639559011563],
+    target: [34.851833052879684, 21.373347845785396, 10.304884228515613],
+  },
 ];
 
 const gaUD = [
@@ -330,7 +349,8 @@ const gaUD = [
     name: "Kitchen and Rocher seawater distillation apparatus",
     content: {
       raw: "Cucina e apparato Rocher per la distillazione dell'acqua di mare",
-      rendered: "<p>Cucina e apparato Rocher per la distillazione dell'acqua di mare</p>",
+      rendered:
+        "<p>Cucina e apparato Rocher per la distillazione dell'acqua di mare</p>",
     },
     position: [16.96600910419457, 15.154237249094276, 7.3064941037839946],
     eye: [5.475919364441243, 12.376923768774798, 25.631555133916983],
@@ -347,8 +367,16 @@ const gaUD = [
     eye: [4.5236405075081905, 5.218032328911567, 25.00992499167978],
     target: [20.43330470161127, 5.344566215550871, -0.8193874883719526],
   },
-
-  
+  {
+    name: "Cages for poultry",
+    content: {
+      raw: "Gabbie per il pollame",
+      rendered: "<p>Gabbie per il pollame</p>",
+    },
+    position: [17.482023620605684, 7.640450017237243, 8.72432256484022],
+    eye: [-5.541842008108279, 4.63061521744562, 22.233022504315088],
+    target: [20.550602633132325, 6.0613606173549, 7.157319009943147],
+  },
 ];
 
 // Global Annotation Lower Deck
@@ -399,6 +427,16 @@ const gaLD = [
     content: {
       raw: "Ospedale di bordo e\r\nalloggi personale sanitario",
       rendered: "<p>Ospedale di bordo e\nalloggi personale sanitario</p>",
+    },
+    position: [-0.47235441908995895, 21.806393406791308, 5.88754785609925],
+    eye: [-13.151098243967688, 22.46197688330095, 24.698962742525826],
+    target: [-1.4172819799472611, 22.710922496627138, 5.708786327153302],
+  },
+  {
+    name: "Cages for poultry",
+    content: {
+      raw: "Gabbie per il pollame",
+      rendered: "<p>Gabbie per il pollame</p>",
     },
     position: [-0.47235441908995895, 21.806393406791308, 5.88754785609925],
     eye: [-13.151098243967688, 22.46197688330095, 24.698962742525826],
@@ -633,43 +671,49 @@ let tabelle = () => {
     temp2[a] = tabella1;
     temp.appendChild(tabella1);
   });
- tabellaMain.tab = temp2[1];
- tabellaUpper.tab =temp2[2];
- tabellaLower.tab =temp2[3];
- tabellaHold.tab = temp2[4];
- tabellaLowerHold.tab =temp2[5];
+  tabellaMain.tab = temp2[1];
+  tabellaUpper.tab = temp2[2];
+  tabellaLower.tab = temp2[3];
+  tabellaHold.tab = temp2[4];
+  tabellaLowerHold.tab = temp2[5];
 
   return bibliteca;
 };
 
-
 let tabellaSails = {
-  tit: gaSails, 
-  tab: undefined
+  tit: gaSails,
+  tab: undefined,
 };
 let tabellaMain = {
-  tit: gaMainDock, 
-  tab: undefined
+  tit: gaMainDock,
+  tab: undefined,
 };
 
 let tabellaUpper = {
-  tit: gaUD, 
-  tab: undefined
+  tit: gaUD,
+  tab: undefined,
 };
-let tabellaLower= {
-  tit: gaLD, 
-  tab: undefined
+let tabellaLower = {
+  tit: gaLD,
+  tab: undefined,
 };
-let tabellaHold= {
-  tit: gaHO, 
-  tab: undefined
+let tabellaHold = {
+  tit: gaHO,
+  tab: undefined,
 };
-let tabellaLowerHold= {
-  tit: gaLH, 
-  tab: undefined
+let tabellaLowerHold = {
+  tit: gaLH,
+  tab: undefined,
 };
 
-const tabelleGlobal = [tabellaSails,tabellaMain,tabellaUpper,tabellaLower, tabellaHold, tabellaLowerHold];
+const tabelleGlobal = [
+  tabellaSails,
+  tabellaMain,
+  tabellaUpper,
+  tabellaLower,
+  tabellaHold,
+  tabellaLowerHold,
+];
 
 //CAMERE
 //cam default

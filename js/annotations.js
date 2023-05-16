@@ -327,6 +327,16 @@ const gaUD = [
     target: [20.910937220410954, -1.5421613054694159, -0.5589249387775245],
   },
   {
+    name: "Kitchen and Rocher seawater distillation apparatus",
+    content: {
+      raw: "Cucina e apparato Rocher per la distillazione dell'acqua di mare",
+      rendered: "<p>Cucina e apparato Rocher per la distillazione dell'acqua di mare</p>",
+    },
+    position: [16.96600910419457, 15.154237249094276, 7.3064941037839946],
+    eye: [5.475919364441243, 12.376923768774798, 25.631555133916983],
+    target: [21.385583558544322, 12.5034576554141, -0.19775734613474918],
+  },
+  {
     name: "9+9 30-pounders cast in the Gusswerk foundries near Mariazell",
     content: {
       raw: "9+9 Cannoni da 30\r\nlibbre fusi nelle fonderie Gusswerk vicino a\r\nMariazell, Stiria",
@@ -337,16 +347,7 @@ const gaUD = [
     eye: [4.5236405075081905, 5.218032328911567, 25.00992499167978],
     target: [20.43330470161127, 5.344566215550871, -0.8193874883719526],
   },
-  {
-    name: "Kitchen and Rocher seawater distillation apparatus",
-    content: {
-      raw: "Cucina e apparato Rocher per la distillazione dell'acqua di mare",
-      rendered: "<p>Cucina e apparato Rocher per la distillazione dell'acqua di mare</p>",
-    },
-    position: [16.96600910419457, 15.154237249094276, 7.3064941037839946],
-    eye: [5.475919364441243, 12.376923768774798, 25.631555133916983],
-    target: [21.385583558544322, 12.5034576554141, -0.19775734613474918],
-  },
+
   
 ];
 

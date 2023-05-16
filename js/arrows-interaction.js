@@ -12,7 +12,7 @@ function getClickableElements() {
 function handleArrowNavigation(e) {
   const clickableElements = getClickableElements();
   const ButtonIndex = floors.name;
-  if (clickableElements.length === 0) {
+  if (clickableElements.length === 0) { 
     return;
   }
 

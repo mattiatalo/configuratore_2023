@@ -42,20 +42,6 @@ function playSound() {
 }
 
 var anchorLink = "#api-frame";
-/**
- * ASSEGNO UN ACHORLINK COMUNE A TUTTI
- */ // assegna lo stesso attributo href a tutti gli elementi di ancoraggio
-/* 
-var links = document.querySelectorAll("#panel a");
-for (var i = 0; i < links.length; i++) {
-  links[i].setAttribute("href", anchorLink);
-} */
-
-/* var myElement = document.getElementById("frameC");
-var myElement2 = document.getElementById("myEl");
-var height = myElement.offsetHeight;
-myElement2.textContent = "L'altezza dell'elemento è: " + height + "px";
- */
 
 /*
 CLASSI OGGETTI
@@ -380,6 +366,12 @@ let success = (apiClient) => {
       api.hide(floors[parte].id);
     }
 
+
+    api.getCameraLookAt(function(err, camera) {
+      window.console.log(camera.position); // [x, y, z]
+      window.console.log(camera.target); // [x, y, z]
+  });
+
     listAnnotations();
     //rimuoviAnnotazioni();
 
@@ -526,3 +518,4 @@ client.init(uid, {
   autostart: 0,
   preload: 0,
 });
+
